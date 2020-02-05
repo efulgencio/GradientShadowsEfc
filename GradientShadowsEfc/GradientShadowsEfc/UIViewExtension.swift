@@ -19,4 +19,14 @@ extension UIView {
         self.layer.shadowRadius = CGFloat(15.0)
         self.layer.shadowOffset = CGSize(width: CGFloat(-15), height: CGFloat(15))
     }
+    
+    func addBlurredBackground() {
+        self.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(blurEffectView, at: 0)
+        
+    }
 }

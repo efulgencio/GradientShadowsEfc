@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         viewStyle.apply()
+        viewStyle.addBlurredBackground()
     }
     
     override func viewDidLayoutSubviews() {
